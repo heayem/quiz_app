@@ -1,0 +1,319 @@
+/* all  */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Head_top navbar */
+.Head_top {
+    padding: 0px;
+}
+
+h1 {
+    font-size: 17px;
+}
+
+.Head_top ul {
+    padding: 0px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.Head_top ul li {
+    padding: 0px;
+    margin: 0px;
+}
+
+.Head_top ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.Head_top ul li a h1,
+i {
+    text-align: center;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.Head_top ul li a:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.196);
+}
+
+.box {
+    width: 100%;
+    height: 250px;
+    color: white;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.box h1 {
+    margin: 5px;
+}
+
+.box i {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.box i:hover {
+    opacity: 0.9;
+}
+
+.box:hover {
+    opacity: 0.8;
+}
+
+/* upload */
+.upload {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.upload .frm {
+    width: 400px;
+    height: auto;
+    padding: 0px;
+    background-color:#eee;
+
+}
+
+.upload .frm .q_block {
+    width: 400px;
+    float: left;
+}
+
+.upload .frm .a_block {
+    width: 400px;
+    float: left;
+}
+
+.upload .frm .input {
+    padding: 5px;
+    border-radius: 5px;
+    width: 350px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+.upload .frm .textArea{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 350px;
+    padding: 5px;
+    border-radius: 5px;
+    float: left;
+}
+
+.upload .frm .box-img {
+    margin-left: 100px;
+    margin-bottom: 10px;
+    border: 1px solid blue;
+    float: left;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    background-image: url("imgStore/download.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.upload .frm .box-img input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.upload .frm .frm-boder {
+    text-align: center;
+    float: left;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.856);
+    color: white;
+}
+
+.upload .frm .btn {
+    color: white;
+    float: left;
+    margin: 10px 0px 10px 70px;
+    padding: 10px;
+    width: 100px;
+}
+
+.table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+
+.table thead tr th {
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tbody tr td {
+    
+    border: 1px solid black;
+    text-align: center;
+}
+.table tbody tr td img{
+    width: 150px;
+}
+.table tbody tr td button{
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    color: white;
+}
+
+
+/* popUp  */
+.popup {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.196);
+    display: none;
+    z-index: 10;
+}
+
+.popupFrom {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.196);
+    /* background-color: white; */
+}
+
+.popup .loading {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup .loading i {
+    font-size: 40px;
+}
+
+
+/* show data */
+.showData {
+    margin-top: 20px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.showData .btnShow {
+    background-color: green;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.showData .btnShow:hover {
+    opacity: 0.9;
+}
+.showData .btnShow a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.showData .btnShow a:hover {
+    opacity: 0.8;
+}
+
+/* a tage link to form page */
+.a {
+    text-decoration: none;
+}
+
+.a i {
+    color: white;
+}
+
+/* a tage link to form page */
+
+/* select option */
+select option{
+    padding: 20px;
+}
+
+/* Login page */
+
+.frm{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.frm .input{
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    margin: 5px;
+}
+.frm #BtnLog{
+    padding:5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100px;
+    background-color:darkgreen;
+}
+
+.iconPermession{
+    cursor: pointer;
+}
