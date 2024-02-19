@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Preahvihear&family=Taprom&display=swap");
+body{
+    /* width: 100%;
+    height: 100vh; */
+    /* box-sizing: border-box; */
+    font-family: "Preahvihear", sans-serif;
+    
+}
+a{
+    text-decoration: none;
+}
+
+/* Loading block  */
+.Loading {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 7;
+    background-color: rgba(6, 8, 44, 0.911);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Reward {
+    width: 700px;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 7;
+    background-color: white;
+    display: none;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center; 
+  }
+  .main-1 .Reward .box-img img{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  .Reward_btn{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff3d00;
+    font-size: 32px;
+    color: #FFF;
+  }
+
+  .Load {
+    width: 700px;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 7;
+    background-color: black;
+    display: none;
+    justify-content: center; 
+    align-items: center; 
+  }
+  .loader1 {
+    position: relative;
+    width: 40px;
+    height: 60px;
+    animation: heartBeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .loader1:before,
+  .loader1:after {
+    content: "";
+    background: #ff3d00 ;
+    width: 40px;
+    height: 60px;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: 50% 68%;
+    box-shadow: 5px 4px 5px #0004 inset;
+  }
+  .loader1:after {
+    transform: rotate(-45deg);
+  }
+  @keyframes heartBeat {
+    0% { transform: scale(0.95) }
+    5% { transform: scale(1.1) }
+    39% { transform: scale(0.85) }
+    45% { transform: scale(1) }
+    60% { transform: scale(0.95) }
+    100% { transform: scale(0.9) }
+  }
+        
+  
+  
+
+  .spinner-hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 32px 0 #fff, -32px 0 #fff;
+    position: relative;
+    animation: flash 0.5s ease-out infinite alternate;
+  }
+  
+  @keyframes flash {
+    0% {
+      background-color: #FFF2;
+      box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
+    }
+    50% {
+      background-color: #FFF;
+      box-shadow: 32px 0 #FFF2, -32px 0 #FFF2;
+    }
+    100% {
+      background-color: #FFF2;
+      box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
+    }
+  }
+.popupQuiz{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  /* top: 9vh; */
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.89);
+
+}
+
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.747);
+    animation-name: popup;
+    animation-duration: 5s;
+}
+
+@keyframes popup{
+    from{
+        height: 0;
+    }
+    to{
+        height: 100vh;
+    }
+}
+.popup .btnPlay{
+    width: 200px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-image: radial-gradient(
+    circle farthest-corner at 7.2% 13.6%,
+    rgba(37, 249, 245, 1) 0%,
+    rgba(8, 70, 218, 1) 90%
+  );
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.534);
+  transition: 0.5s;
+  animation: btnAnimate linear 2s infinite;
+   
+}
+.btnPlay:hover {
+    background-image: linear-gradient(
+      105.4deg,
+      rgba(216, 176, 216, 1) 23.9%,
+      rgba(53, 169, 215, 1) 86.5%
+    );
+  }
+@keyframes btnAnimate {
+    0%,
+    100% {
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0.514);
+    }
+    25%,
+    75% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.507);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.493),
+        0 0 20px rgba(255, 255, 255, 0.514);
+    }
+  }
+  
+
+.popup p{
+    font-size: 20px;
+    margin-top: 50px;
+    color: #FFF;
+}
+.popup .social-media{
+    font-size: 30px;
+}
+.popup .social-media .facebook{
+    color: blue;
+}
+.popup .social-media .telegram{
+    color: blue;
+}
+.popup .social-media .youtube{
+    color:red;
+}
+.main{
+  position: relative;
+  z-index: 1;
+  width: 700px;
+  height: 95vh;
+  box-shadow: 0 0 10px rgba(65, 64, 64, 0.534);
+}
+.title h1{
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.title{
+  width: 100%;
+  background-color: black;
+  color: #FFF;
+} 
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  font-size: 32px;
+}
+.btn {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: springgreen;
+  color: white;
+}
+.select {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: springgreen;
+  color: white;
+}
+.main-1{
+  width: 700px;
+  position:relative;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0px;
+  background-color: white;
+
+}
+
+
+.main-1 .box-img {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.main-1 .box-img img{
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+.main-1 .answer{
+  text-align: center;
+  padding: 10px;
+
+}
+.main-1 .answer .i_answer{
+  cursor: pointer;
+}
+
+
+.question{
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* align-items: center; */
+  flex-direction:row;
+  background-color:blue;
+}
+.question h1{
+  color: #FFF;
+  padding: 10px;
+  margin: 10px;
+  font-size: 17px;
+  /* background-color: aqua; */
+}
+.question .btnBack{
+  width: 80px;
+  font-size: 32px;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+}

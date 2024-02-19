@@ -1,0 +1,45 @@
+ var body = $("body");
+    var popup = `<div class="popup"> </div>`;
+    var frm = { "0": "frm-category.php", "1": "frm-news.php" }
+    var frm_opt = 0;
+
+
+$(".Bar-box1").click(function () {
+        body.append(popup);
+        body.find(".popup").load("frm/" + frm[frm_opt], function (responseTxt, statusTxt, xhr) {
+            if (statusTxt == "success")
+                getAutoId();
+            if (statusTxt == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+    });
+
+
+  $(".Bar2").on("click", ".opt li", function () {
+        search = 0;
+        frm_opt = $(this).data("opt");
+        // set filter field
+        var obj1 = filter[frm_opt];
+        var txt = `<option value=''></option>`;
+        for (const key of Object.keys(obj1)) {
+            // console.log(key,obj1[key]);
+            txt += ` <option value='${key}'> ${obj1[key]} </option> `;
+        }
+        filt_feild.html(txt);
+
+        $("#Bar1").show();
+        if (frm_opt == 0) {
+            currentpage.text(1);
+            getMenu();
+        } else if (frm_opt == 1) {
+            getNews();
+        }
+    });
+
+    > form frontend
+
+
+    $ select random record 
+        > SELECT * FROM q_question ORDER BY RAND() LIMIT 1
+        >SELECT Q_question,img,answer FROM q_question INNER JOIN tb_answer ORDER BY RAND() LIMIT 1
+    
